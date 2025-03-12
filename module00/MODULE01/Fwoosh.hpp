@@ -6,11 +6,14 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 18:46:40 by anastruc          #+#    #+#             */
-/*   Updated: 2025/03/11 19:32:07 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/03/12 19:17:09 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ASpell.hpp"
+
+#ifndef FWOOSH_HPP
+#define FWOOSH_HPP
 
 class Fwoosh : public ASpell
 {
@@ -22,3 +25,5 @@ class Fwoosh : public ASpell
     Fwoosh& operator=(const Fwoosh &other);
     virtual ASpell* clone() const;
 };
+
+#endif

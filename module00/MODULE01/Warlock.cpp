@@ -6,11 +6,15 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 14:36:00 by anastruc          #+#    #+#             */
-/*   Updated: 2025/03/11 16:18:07 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/03/12 18:29:02 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Warlock.hpp"
+#include "ASpell.hpp"
+#include "map"
+
+
 
 /*C&C*/
 Warlock::Warlock()
@@ -21,6 +25,16 @@ Warlock::Warlock()
 Warlock::~Warlock()
 {
     std::cout << getName() << ": My job here is done!" << std::endl;
+    std::map<std::string, ASpell*>::iterator it = spellbook.begin();
+    while (it != spellbook.end())
+    {
+        if (it->second != NULL)
+        {
+            delete(it->second);
+        }
+        it++;
+        spellbook.erase(it);
+    }
 }
 
 Warlock::Warlock(const Warlock &other) : name(other.name), title(other.title)
@@ -65,4 +79,34 @@ void Warlock::setTitle(const std::string title)
 void Warlock::introduce() const
 {
     std::cout << getName() << ": I am " << getName() << ", " << getTitle() << "!" << std::endl; 
+}
+
+
+/*Vector :: Map, Methods*/
+
+void Warlock::learnSpell(ASpell* spell)
+{
+    if (spell)
+    {
+        spellbook[spell->getName()] = spell->clone();
+    }
+}
+
+void Warlock::forgetSpell(std::string spellname)
+{
+    std::map<std::string, ASpell*>::iterator it = spellbook.find(spellname);
+    if (it != spellbook.end())
+    {
+        delete it->second;
+        spellbook.erase(it);
+    }
+}
+
+void Warlock::launchSpell(std::string spellname, ATarget &other)
+{
+    std::map<std::string, ASpell*>::iterator it = spellbook.find(spellname);
+    if (it != spellbook.end())
+    {
+        it->second->launch(other);
+    }
 }

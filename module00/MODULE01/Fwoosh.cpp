@@ -6,13 +6,13 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 18:46:38 by anastruc          #+#    #+#             */
-/*   Updated: 2025/03/11 19:48:03 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/03/12 19:25:35 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fwoosh.hpp"
 
-Fwoosh::Fwoosh() : ASpell("Fwoosh", "Fwooshed"){}
+Fwoosh::Fwoosh() : ASpell("Fwoosh", "fwooshed!"){}
 
 Fwoosh::~Fwoosh(){}
 

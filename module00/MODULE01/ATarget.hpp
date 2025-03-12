@@ -6,7 +6,7 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 17:41:54 by anastruc          #+#    #+#             */
-/*   Updated: 2025/03/11 19:25:44 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/03/12 18:34:42 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #include <iostream>
 
 
-#ifndef ATarget_HPP
-#define ATarget_HPP
+#ifndef ATARGET_HPP
+#define ATARGET_HPP
 
 class ASpell;
 class ATarget

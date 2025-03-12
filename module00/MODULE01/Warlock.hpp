@@ -6,16 +6,21 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 13:36:52 by anastruc          #+#    #+#             */
-/*   Updated: 2025/03/11 15:46:23 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/03/12 18:29:32 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "string"
+#include <map>
 
 #ifndef WARLOCH_HPP
 #define WARLOCH_HPP
 
+
+
+class ASpell;
+class ATarget;
 class Warlock
 {
     /*C&D*/
@@ -30,10 +35,15 @@ class Warlock
     const std::string &getTitle() const;
     void setTitle(const std::string title);
     void introduce() const;
+    void learnSpell(ASpell *spell);
+    void forgetSpell(std::string spellname);
+    void launchSpell(std::string spellname, ATarget &other);
     
     
     private :
     /*attribut */ 
+    
+    std::map<std::string, ASpell*> spellbook;
     std::string name;
     std::string title;
     /*C&D : our Warlock

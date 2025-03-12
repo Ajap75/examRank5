@@ -6,14 +6,14 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 17:41:56 by anastruc          #+#    #+#             */
-/*   Updated: 2025/03/11 19:25:15 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/03/12 17:10:06 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./ATarget.hpp"
 #include "ASpell.hpp"
 
-ATarget::ATarget() : type("Unknown"){}
+ATarget::ATarget() : type("Target Practice Dummy"){}
 
 ATarget::ATarget(std::string type) : type(type){}
 

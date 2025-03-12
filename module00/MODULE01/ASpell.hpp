@@ -6,7 +6,7 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 16:42:46 by anastruc          #+#    #+#             */
-/*   Updated: 2025/03/11 19:24:59 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/03/12 19:16:52 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 #include <string>
 
 #ifndef ASPELL_HPP
-#define APPELL_HPP
+#define ASPELL_HPP
 
 class ATarget;
 class ASpell
 {
     public :
     /*C&D*/
-    ASpell();
     ASpell(std::string name, std::string effect);
     virtual ~ASpell();
     ASpell(const ASpell &other);
@@ -36,6 +35,7 @@ class ASpell
     
     std::string name;
     std::string effects;
+    ASpell();
     
     private :
     
